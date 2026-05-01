@@ -1,5 +1,43 @@
+<!DOCTYPE html>
 <html>
-  <button>
-    test button
+<head>
+  <style>
+    /* Centers the button in the middle of the screen */
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f0f0f0;
+      font-family: sans-serif;
+    }
+
+    .upload-btn {
+      padding: 12px 24px;
+      font-size: 16px;
+      cursor: pointer;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+
+    .upload-btn:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hidden file input -->
+  <input type="file" id="fileInput" accept="image/*" style="display: none;">
+
+  <!-- Visible button -->
+  <button class="upload-btn" onclick="document.getElementById('fileInput').click();">
+    Upload Image
   </button>
+
+</body>
 </html>
